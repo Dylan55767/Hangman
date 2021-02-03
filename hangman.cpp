@@ -19,7 +19,6 @@ void displayNumbersInVector( const vector<int>& v )
 void test1()
 {
     cout << "test function 1" << endl;
-    cout<<"try"<<endl;
     vector<int> num;
     //declared num to be a sequential container of integerd
     num.push_back(1); //add 1 into the container
