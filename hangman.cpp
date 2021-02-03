@@ -28,7 +28,42 @@ void test1()
     cout << "number in container are : ";
     displayNumbersInVector(num);
 }
+
+void checkPositions(const string& secret,
+ char guess,
+ vector<int>& positions
+ )
+{
+ positions.clear(); //clear the container named positions
+ int len = secret.length(); //get number of characters in string
+ //hint: search through the string named secret one character by character,
+ // when you find the character in string secret is
+ // the same as character named guess, then take note the position
+ // number of that character in the string secret, push that position
+ // number into the container named positions.
+ // Refer to test1() function above for more hints.
+ .... fill this up (not more than 5 lines) .....
+} 
+void test2()
+{
+    cout << "test function 2" << endl;
+    string secret;
+    secret = "programming";
+    char guess = 'g';
+
+    vector<int> positions; //declared positions to be a container of integers
+    checkPositions(secret, guess, positions);
+
+    cout << "character \'" << guess << "\' appears in string \""
+    << secret << "\" at position : ";
+    //After calling function checkPositions(...) above,
+    // function displayNumbersInVector below should display: 3 10
+    // because char 'g' appears in position 3 and 10 of string secret
+    displayNumbersInVector( positions );
+} 
+
 int main()
 {
     test1();
+    test2();
 }
